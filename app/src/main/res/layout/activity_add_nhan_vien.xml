@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity_addNhanVien">
+
+
+    <EditText
+        android:id="@+id/textNVTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="10dp"
+        android:hint="Ten nhan vien"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="118dp" />
+    <EditText
+        android:id="@+id/textNVDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="10dp"
+        android:hint="Ngay Sinh"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="118dp" />
+    <EditText
+        android:id="@+id/textNVQueQuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="10dp"
+        android:hint="Que Quan"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="118dp" />
+    <EditText
+        android:id="@+id/textNVTrinhDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="10dp"
+        android:hint="Trinh do"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <Button
+        android:id="@+id/btnaddNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Them Nhan Vien" />
+
+</LinearLayout>
