@@ -27,6 +27,8 @@ public class nhanvien_activity extends AppCompatActivity {
         });
 
         NhanVienDAO dao = new NhanVienDAO(nhanvien_activity.this);
+        dao.create();
+        ViTriDAO dao2 = new ViTriDAO(nhanvien_activity.this);
         List<NhanVien> listNV = dao.getAllNhanVien();
         System.out.println(listNV.size());
         NhanVienAdapter adapter = new NhanVienAdapter(listNV, nhanvien_activity.this);

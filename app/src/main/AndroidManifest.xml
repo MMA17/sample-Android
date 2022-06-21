@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaiTapMau">
         <activity
-            android:name=".vitri_item"
+            android:name=".NhanVien95"
+            android:exported="false" />
+        <activity
+            android:name=".DSNhanVienViTri"
+            android:exported="false" />
+        <activity
+            android:name=".NhanVienViTri"
             android:exported="false" />
         <activity
             android:name=".addvitri"

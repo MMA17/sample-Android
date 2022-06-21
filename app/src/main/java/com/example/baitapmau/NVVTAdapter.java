@@ -1,6 +1,7 @@
 package com.example.baitapmau;
 
 import android.content.Context;
+import android.os.TestLooperManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,28 +10,30 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ViTriAdapter extends BaseAdapter {
-    private List<ViTri> listViTri;
+public class NVVTAdapter extends BaseAdapter {
     private Context context;
+    private List<NVVTClass> listNVVT;
 
     private class viewHolder {
-        TextView textVTTen, textVTMota;
+        TextView textTenNhanVien, textTenViTri;
     }
 
-    public ViTriAdapter(List<ViTri> listViTri, Context context) {
-        this.listViTri = listViTri;
+    public NVVTAdapter() {
+    }
+
+    public NVVTAdapter(Context context, List<NVVTClass> listNVVT) {
         this.context = context;
+        this.listNVVT = listNVVT;
     }
-
 
     @Override
     public int getCount() {
-        return listViTri.size();
+        return listNVVT.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return listViTri.get(i);
+        return listNVVT.get(i);
     }
 
     @Override
@@ -43,16 +46,16 @@ public class ViTriAdapter extends BaseAdapter {
         viewHolder vh = new viewHolder();
         if (view == null) {
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = li.inflate(R.layout.vitri_item, null);
-            vh.textVTTen = view.findViewById(R.id.vtTen);
-            vh.textVTMota = view.findViewById(R.id.vtMoTa);
+            view = li.inflate(R.layout.nhanvienvitri_item, null);
+            vh.textTenNhanVien = view.findViewById(R.id.textTenNhanVien);
+            vh.textTenViTri = view.findViewById(R.id.textTenViTri);
             view.setTag(vh);
         }
         else {
             vh = (viewHolder) view.getTag();
         }
-        vh.textVTTen.setText(listViTri.get(i).getTen());
-        vh.textVTMota.setText(listViTri.get(i).getMoTa());
+        vh.textTenViTri.setText(listNVVT.get(i).getTenViTri());
+        vh.textTenNhanVien.setText(listNVVT.get(i).getTenNhanVien());
         return view;
     }
 }

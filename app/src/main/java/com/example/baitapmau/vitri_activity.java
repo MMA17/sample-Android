@@ -27,6 +27,7 @@ public class vitri_activity extends AppCompatActivity {
         });
 
         ViTriDAO dao = new ViTriDAO(vitri_activity.this);
+        dao.create();
         List<ViTri> listVT = dao.getAllVitri();
         System.out.println(listVT.size());
         ViTriAdapter adapter = new ViTriAdapter(listVT, vitri_activity.this);

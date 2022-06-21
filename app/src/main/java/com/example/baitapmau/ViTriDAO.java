@@ -20,7 +20,7 @@ public class ViTriDAO extends SQLiteOpenHelper {
 
 
     public ViTriDAO(Context context) {
-        super(context, DATABASENAME, null, 4);
+        super(context, DATABASENAME, null, 2);
     }
 
     @Override
@@ -35,6 +35,11 @@ public class ViTriDAO extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    public void create() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("CREATE TABLE IF NOT EXISTS vitri (id integer PRIMARY KEY AUTOINCREMENT, ten text, mota text)");
+    }
+
     public List<ViTri> getAllVitri() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLENAME, null);
@@ -46,20 +51,24 @@ public class ViTriDAO extends SQLiteOpenHelper {
             res.add(nv);
             c.moveToNext();
         }
+        c.close();
+        db.close();
         return res;
     }
 
     public boolean addViTri (ViTri vt) {
-        SQLiteDatabase db2 = this.getReadableDatabase();
+        SQLiteDatabase db2 = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(KEY_TEN, vt.getTen());
         cv.put(KEY_MOTA, vt.getMoTa());
         long res = db2.insert(TABLENAME,null, cv);
+        db2.close();
         if (res == -1) {
             return false;
         }
         else {
             return true;
         }
+
     }
 }

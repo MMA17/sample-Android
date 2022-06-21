@@ -31,5 +31,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button btnNVVT = findViewById(R.id.btnViTriNhanVien);
+        btnNVVT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, NhanVienViTri.class);
+                startActivity(i);
+            }
+        });
+
+        Button DSNVVT = findViewById(R.id.btnDSVTNV);
+        DSNVVT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, DSNhanVienViTri.class);
+                startActivity(i);
+            }
+        });
+
+        Button nv95 = (Button) findViewById(R.id.btnNV95);
+        nv95.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, NhanVien95.class);
+                startActivity(i);
+            }
+        });
     }
 }

@@ -31,5 +31,23 @@
         android:layout_marginHorizontal="30dp"
         android:layout_height="wrap_content"
         android:minHeight="70dp"
-        android:text="Quan ly vi tri nhan vien" />
+        android:text="Them vi tri cho nhan vien" />
+
+    <Button
+        android:id="@+id/btnDSVTNV"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:text="Danh sach nhan vien theo vi tri" />
+
+    <Button
+        android:id="@+id/btnNV95"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:text="Danh sach nhan vien Nam 95" />
 </LinearLayout>
